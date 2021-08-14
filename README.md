@@ -1,1 +1,1 @@
-# Proyecto-de-Pensamiento-Computacional-para-ingenier-a
+# Proyecto-de-Pensamiento-Computacional-para-ingenieria
