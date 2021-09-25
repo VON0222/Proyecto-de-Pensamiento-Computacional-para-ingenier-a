@@ -1,8 +1,8 @@
 #Esta función da a elegir al usuario el banner del cual obtener información.
 
 def info_banner():
-    banner = input("De que banner quieres saber información?\nBanner permanente opcion 1\nBanner de armas opcion 2\n"   
-                   "Banner de promocion 3\n")
+    banner = input("De que banner quieres saber información?\nBanner permanente (opcion 1)\nBanner de armas (opcion 2)\n"   
+                   "Banner de promocion (opcion 3)\n")
     if banner == "1":
         print("Este banner es un deseo estándar sin límite de tiempo. Hay disponibles armas y personajes\nno "
               "promocionales. En este deseo, garantiza ganar un artículo de 4 estrellas o superior al\nmenos una vez "
@@ -80,8 +80,8 @@ print("En genshin impact hay un sistema de gacha el cual tiene un sistema de pit
 reinicio = "si"
 
 while reinicio == "si":
-    funcion = input("Que quieres hacer?\nChecar tus probabilidades opcion 1\nCalcular tus deseos faltantes para un "
-                    "personaje de 5 estrellas opcion 2\nCalcular cuantos destinos puedes obtener opcion 3\n")
+    funcion = input("Que quieres hacer?\nChecar tus probabilidades (opcion 1)\nCalcular tus deseos faltantes para un "
+                    "personaje de 5 estrellas (opcion 2)\nCalcular cuantos destinos puedes obtener (opcion 3)\n")
     if funcion == "1":
         info_banner()
         reinicio = input("Volver al menu?\n")
