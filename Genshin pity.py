@@ -121,7 +121,7 @@ def gacha():
         chara4num = randint(0, 3)
         weap4 = ["Flauta","Rugido del leon","Espada del tiempo","Memorias de sacrificios"]
         weap4num = randint(0, 3)
-        prob = 0.5
+        prob = uniform(0,100)
         if prob <= 0.6:
             print("Obtuviste a", chara5[chara5num])
         elif (prob <= 3.15) and (prob > 0.6):
