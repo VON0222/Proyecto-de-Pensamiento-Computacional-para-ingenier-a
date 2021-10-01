@@ -78,20 +78,20 @@ def gacha():
                     "Banner de promocion (opcion 3)\n")
     if banner == "1":
         chara5 = ["Jean","Diluc","Mona","Keching","Qiqi" ]
-        chara5num = randint(0,5)
+        chara5num = randint(0,4)
         weap5 = ["Arco de amos","Alas celestiales","Oración Perdida a los Vientos Sagrados","Pergamino Celestial"]
-        weap5num = randint(0,4)
+        weap5num = randint(0,3)
         chara4 = ["Diona","Razor","Beidou","Bennet"]
-        chara4num = randint(0,4)
+        chara4num = randint(0,3)
         weap4 = ["Herrumbre","Arco del sacrificio","Ultimo acorde","Ojo de la perspicacia"]
-        weap4num = randint(0,4)
+        weap4num = randint(0,3)
         prob = uniform(0,100)
         if prob <= 0.3:
-            print("Obtuviste", chara5[chara5num])
+            print("Obtuviste a", chara5[chara5num])
         elif (prob <= 0.6) and (prob > 0.3):
             print("Obtuviste", weap5[weap5num])
         elif (prob <= 3.15) and (prob > 0.6):
-            print("Obtuviste", chara4[chara4num])
+            print("Obtuviste a", chara4[chara4num])
         elif (prob <= 5.7) and (prob > 3.15):
             print("Obtuviste", weap4[weap4num])
         else:
@@ -99,35 +99,35 @@ def gacha():
 
     elif banner == "2":
         weap5 = ["Luna inalterable","Cortador de Jade primordial","Halcón de jade","Lápida del lobo"]
-        weap5num = randint(0, 4)
+        weap5num = randint(0, 3)
         chara4 = ["Diona", "Razor", "Beidou", "Bennet"]
-        chara4num = randint(0, 4)
+        chara4num = randint(0, 3)
         weap4 = ["Códice de Favonius","Segadora de la lluvia","Perdición del dragon","Gran espada de sacrificio"]
-        weap4num = randint(0, 4)
+        weap4num = randint(0, 3)
         prob = uniform(0, 100)
         if prob <= 0.7:
             print("Obtuviste", weap5[weap5num])
         elif (prob <= 3.7) and (prob > 0.7):
             print("Obtuviste", weap4[weap4num])
         elif (prob <= 6.7) and (prob > 3.7):
-            print("Obtuviste", chara4[chara4num])
+            print("Obtuviste a", chara4[chara4num])
         else:
             print("Obtuviste un arma de 3 estrellas :(")
 
     elif banner == "3":
         chara5 = ["Sangonomiya","Jean","Diluc","Mona","Keching","Qiqi"]
-        chara5num = randint(0, 6)
+        chara5num = randint(0, 5)
         chara4 = ["Diona", "Xingchiu", "Beidou", "Rosaria"]
-        chara4num = randint(0, 4)
+        chara4num = randint(0, 3)
         weap4 = ["Flauta","Rugido del leon","Espada del tiempo","Memorias de sacrificios"]
-        weap4num = randint(0, 4)
-        prob = uniform(0, 100)
+        weap4num = randint(0, 3)
+        prob = 0.5
         if prob <= 0.6:
-            print("Obtuviste", chara5[chara5num])
+            print("Obtuviste a", chara5[chara5num])
         elif (prob <= 3.15) and (prob > 0.6):
             print("Obtuviste", weap4[weap4num])
         elif (prob <= 5.7) and (prob > 3.15):
-            print("Obtuviste", chara4[chara4num])
+            print("Obtuviste a", chara4[chara4num])
         else:
             print("Obtuviste un arma de 3 estrellas :(")
 
