@@ -1,0 +1,29 @@
+﻿Sub-Competencia: 
+        componente: aplica listas anidadas o matrices para resolver un problema
+
+
+Error original: Había usado una matriz solo para imprimir varias listas una detrás de la otra. 
+
+
+historial.append(sesionp)
+historial.append(sesiona)
+historial.append(sesionpr)
+…
+print("Lo que obtuviste de esta sesion fue", historial)
+historial = []
+
+
+Cambio realizado: Use ciclos for para leer los elementos que hay dentro de la matriz en vez de imprimir las listas.
+
+
+historial.append(sesionp)
+historial.append(sesiona)
+historial.append(sesionpr)
+…
+print("Lo que obtuviste de esta sesion fue")
+for listas in historial:
+for elemhistorial in listas:
+print(elemhistorial)
+
+
+Líneas de código donde se ve la corrección: 259 a 267
