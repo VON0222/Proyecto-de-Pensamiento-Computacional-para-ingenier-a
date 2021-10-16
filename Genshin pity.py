@@ -10,10 +10,10 @@
 from random import uniform
 from random import randint
 
-# Esta función da a elegir al usuario el banner del cual obtener información.
-
 
 def info_banner(bannerinf):
+
+#Comentario def: funcion, argumento y resultado
 
     if bannerinf == "1":
 
@@ -261,8 +261,10 @@ while reinicio == "si":
         historial.append(sesionpr)
         reiniciogacha = "si"
 
-        print("Lo que obtuviste de esta sesion fue", historial)
-        historial = []
+        print("Lo que obtuviste de esta sesion fue")
+        for listas in historial:
+            for elemhistorial in listas:
+                print(elemhistorial)
         reinicio = input("Volver al menu?\n")
 
     else:
