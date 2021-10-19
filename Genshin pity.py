@@ -1,11 +1,23 @@
-# En este codigo se uso la libreria random de la pagina
-# https://docs.python.org/3/library/random.html la cual contiene la
-# función "uniform" la cual genera un numero decimal aletorio entre dos
-# valores dados a la función y "randint" la cual genera un numero entero
-# aleatorio entre dos valores dados a la función.
-# En este codigo use esas dos funciones para hacer una funcion la cual
-# saca elementos de listas de acuerdo a los numeros aleatorios para
-# simular un sistema de probabilidad.
+"""
+Este programa esta diseñado para ayudar a jugadores de Genshin Impact a
+través de funciones que dan información sobre los banner del sistema de
+gacha del juego, calculan la cantidad de una divisa del juego que el
+usuario posee, calculan si a traves de las divisas que poseen el usuario
+puede activar el sistema de pity programado en el juego y generan
+simulaciones similares al sistema de gacha del juego.
+Este programa fue programado por José Diego Llaca Castro,
+matricula A01704793, como proyecto para la materia de Pensamiento
+Computacional para Ingeniería
+
+En este codigo se uso la libreria random de la pagina
+https://docs.python.org/3/library/random.html la cual contiene la
+función "uniform" la cual genera un numero decimal aletorio entre dos
+valores dados a la función y "randint" la cual genera un numero entero
+aleatorio entre dos valores dados a la función.
+En este codigo use esas dos funciones para hacer una funcion la cual
+saca elementos de listas de acuerdo a los numeros aleatorios para
+simular un sistema de probabilidad.
+"""
 
 from random import uniform
 from random import randint
@@ -13,13 +25,12 @@ from random import randint
 
 def info_banner(bannerinf):
 
-    # Esta función muestra la información de cada banner del juego y las
-    # probabilidades de obtención en base a la elección del usuario. La
-    # función recibe la elección del usuario en forma de numero, siendo la
-    # primer opcion el numero 1 la segunda el numero 2 y asi para cada opción.
-    # En caso de no elegir una opcion valida entonces esta funcion volvera a
-    # preguntar por la elección del usuario. Como resultado, la función
-    # imprime la información antes mencionada.
+    """
+    Función: Muestra la información de cada banner del juego y las
+    probabilidades de obtención en base a la elección del usuario.
+    Parametros: Bannerinf, valor numerico entero.
+    Devuelve: Imprime texto.
+    """
 
     if bannerinf == "1":
 
@@ -78,14 +89,15 @@ def info_banner(bannerinf):
 
 def destinos(primos, polvo, brillo):
 
-    # Esta función ayuda al usuario a calcular la cantidad de destinos que
-    # puede obtener a traves del uso de diversas monedas del juego, además
-    # de calcular el reembolso minimo de esta transaccion. Los parametros que
-    # recibe son la cantidad de cada tipo de moneda que el usuario posee. Como
-    # resultado esta función imprime un texto en el cual dice al usuario la
-    # conversión de esas monedas al elemento del juego conocido como "deseos"
-    # y la cantidad de "deseos" que el usuario podria obtener de manera minima
-    # con el rembolso de la transacción original.
+    """
+    Función: Operaciónes matematicas para obtener la transformación de los
+    parametros recibidos en otras variables las cuales se devolveran al
+    usuario.
+    Parametros: Primos, valor numerico entero, Polvo, valor numerico entero,
+    brillo, valor numerico entero.
+    Devuelve: Imprime texto en donde contiene calculos de las variables
+    deseos_calc, reembolso y deseosreem.
+    """
 
     deseos_prim = int(primos/160)
     deseos_polv = int(polvo/75)
@@ -101,13 +113,13 @@ def destinos(primos, polvo, brillo):
 
 def pity(deseos, predeseos):
 
-    # Esta función calcula en base de los "deseos" del usuario, si este
-    # podra activar el sistema que grantiza un personaje de 5 estrellas.
-    # Recibe como parametros la cantidad de "deseos" que el usuario posee y la
-    # cantidad de deseos pedidos desde su ultima obtención de un personaje de
-    # 5 estrellas. Como resultado la función imprime si son suficientes para
-    # activar el sistema "pity" o  en caso de no ser suficiente, imprime la
-    # cantidad de "deseos" faltantes.
+    """
+    Función: Operaciones matematicas para obtener una variable y dependiendo
+    del valor de esta variable se imprime un texto u otro.
+    Parametros: deseos, valor numerico entero, predeseos, valor numerico entero.
+    Devuelve: Imprime un texto en caso de cumplir una condición, si no se
+    cumple, imprime texto que contiene la variable pity_calc.
+    """
 
     deseostot = deseos + predeseos
     pity_calc = 90 - deseostot
@@ -122,16 +134,13 @@ def pity(deseos, predeseos):
 
 def gacha(banner_gacha):
 
-    # Esta función hace una simulación del sistema de gacha del juego de un
-    # deseo a la vez, puede ayudar a los jugadores adictos a esta mecanica
-    # sin que necesiten gastar sus monedas del juego, tambien pregunta al
-    # usuario si desearia volver a intentarlo, lo cual repite esta función.
-    # Recibe como parametro la elección del usuario de en que banner jugar en
-    # forma de numero, siendo la primera opción el numero 1, la segunda el
-    # numero 2 y de igual manera para las demas opciones. Como resultado la
-    # función imprime algun personaje o arma aleatoria dependiendo de la
-    # probabilidad relacionada a estos objetos y guarda los resultados en una
-    # lista dependiendo del banner.
+    """
+    Función: Genera un numero aleatorio con la función randint() y uniform()
+    y en base a ese numero se imprimen strings contenidos en listas y se
+    guardan en otras listas.
+    Parametro: banner_gacha, valor numerico entero.
+    Devuelve: Imprime un string sacado de una lista.
+    """
 
     if banner_gacha == "1":
         chara5 = ["Jean", "Diluc", "Mona", "Keching", "Qiqi"]
@@ -221,7 +230,13 @@ def gacha(banner_gacha):
             print("Obtuviste un arma de 3 estrellas :(")
             sesionpr.append("debate club")
 
-# Definiciones iniciales para varibles y listas usadas en el codigo.
+
+"""
+Definiciones iniciales para varibles y listas usadas en el codigo.
+Las variables son reinicio, es un string, reiniciogacha, es un string,
+historial, es una matriz, sesionp, es una lista, sesiona, es una lista y
+sesionpr, es una lista.
+"""
 
 
 reinicio = "si"
@@ -231,7 +246,7 @@ sesionp = []
 sesiona = []
 sesionpr = []
 
-# Frase mencionada al inicio del programa para proveer contexto al usuario.
+# Impresion de una frase mencionada al inicio del programa para proveer contexto al usuario.
 
 
 print("En genshin impact hay un sistema de gacha el cual tiene un sistema de "
@@ -240,10 +255,14 @@ print("En genshin impact hay un sistema de gacha el cual tiene un sistema de "
       "personaje de 5 estrellas")
 
 
-# Loop while usado para repetir el menu inicial siempre y cuando el
-# usuario lo quiera a traves de la veriable "reinicio" la cual si se
-# mantiene con un valor de "si" repetira el menu. En cualquier otro caso
-# se le dara las gracias al usuario y el programa se detendra.
+"""
+Función: Loop while usado para repetir el menu inicial siempre y cuando
+el usuario lo quiera a traves de la variable "reinicio".
+Dentro del while pide el valor de la variable función, la cual es un
+valor numerico entero.
+Dependiendo de el valor de la variable se pide input para ciertas
+variables y se inician ciertas funciones.
+"""
 
 
 while reinicio == "si":
