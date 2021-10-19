@@ -13,7 +13,13 @@ from random import randint
 
 def info_banner(bannerinf):
 
-#Comentario def: funcion, argumento y resultado
+    # Esta función muestra la información de cada banner del juego y las
+    # probabilidades de obtención en base a la elección del usuario. La
+    # función recibe la elección del usuario en forma de numero, siendo la
+    # primer opcion el numero 1 la segunda el numero 2 y asi para cada opción.
+    # En caso de no elegir una opcion valida entonces esta funcion volvera a
+    # preguntar por la elección del usuario. Como resultado, la función
+    # imprime la información antes mencionada.
 
     if bannerinf == "1":
 
@@ -69,12 +75,17 @@ def info_banner(bannerinf):
                           "(opcion 1)\nBanner de armas (opcion 2)\nBanner de promocion (opcion 3)\n")
         info_banner(bannerinf)
 
-# Esta función ayuda al usuario a calcular la cantidad de destinos que
-# puede obtener a traves del uso de diversas monedas del juego, además
-# de calcular el reembolso minimo de esta transaccion.
-
 
 def destinos(primos, polvo, brillo):
+
+    # Esta función ayuda al usuario a calcular la cantidad de destinos que
+    # puede obtener a traves del uso de diversas monedas del juego, además
+    # de calcular el reembolso minimo de esta transaccion. Los parametros que
+    # recibe son la cantidad de cada tipo de moneda que el usuario posee. Como
+    # resultado esta función imprime un texto en el cual dice al usuario la
+    # conversión de esas monedas al elemento del juego conocido como "deseos"
+    # y la cantidad de "deseos" que el usuario podria obtener de manera minima
+    # con el rembolso de la transacción original.
 
     deseos_prim = int(primos/160)
     deseos_polv = int(polvo/75)
@@ -87,11 +98,16 @@ def destinos(primos, polvo, brillo):
     print("Te reembolsaria minimo", reembolso, "de polvo estelar")
     print("Y con el rembolso podrias comprar", deseosreem, "deseo(s)")
 
-# Esta función calcula en base de los destinos del usuario, si este
-# podra activar el sistema que grantiza un personaje de 5 estrellas.
-
 
 def pity(deseos, predeseos):
+
+    # Esta función calcula en base de los "deseos" del usuario, si este
+    # podra activar el sistema que grantiza un personaje de 5 estrellas.
+    # Recibe como parametros la cantidad de "deseos" que el usuario posee y la
+    # cantidad de deseos pedidos desde su ultima obtención de un personaje de
+    # 5 estrellas. Como resultado la función imprime si son suficientes para
+    # activar el sistema "pity" o  en caso de no ser suficiente, imprime la
+    # cantidad de "deseos" faltantes.
 
     deseostot = deseos + predeseos
     pity_calc = 90 - deseostot
@@ -103,12 +119,19 @@ def pity(deseos, predeseos):
     elif deseostot >= 90:
         print("Tienes suficientes deseos para activar el sistema de pity")
 
-# Esta función hace una simulación del sistema de gacha del juego de un
-# deseo a la vez, puede ayudar a los jugadores adictos a esta mecanica
-# sin que necesiten gastar su moneda del juego.
-
 
 def gacha(banner_gacha):
+
+    # Esta función hace una simulación del sistema de gacha del juego de un
+    # deseo a la vez, puede ayudar a los jugadores adictos a esta mecanica
+    # sin que necesiten gastar sus monedas del juego, tambien pregunta al
+    # usuario si desearia volver a intentarlo, lo cual repite esta función.
+    # Recibe como parametro la elección del usuario de en que banner jugar en
+    # forma de numero, siendo la primera opción el numero 1, la segunda el
+    # numero 2 y de igual manera para las demas opciones. Como resultado la
+    # función imprime algun personaje o arma aleatoria dependiendo de la
+    # probabilidad relacionada a estos objetos y guarda los resultados en una
+    # lista dependiendo del banner.
 
     if banner_gacha == "1":
         chara5 = ["Jean", "Diluc", "Mona", "Keching", "Qiqi"]
